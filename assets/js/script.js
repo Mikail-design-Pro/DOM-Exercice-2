@@ -11,15 +11,12 @@ console.log(
 // -------------------------------------------------------------GENARAL SELECTOR-------------------------------------
 // MENU VARIABLE
 var menuDivEl = document.getElementById('menu');
-// console.log(menuDivEl);
 
 // UnordonedList VARIABLE
 var ulistEl = menuDivEl.querySelector('ul');
-// console.log(ulistEl);
 
 //  LIST ITEM VARIABLE
 var itemListEl = document.querySelectorAll('#menu > ul > li');
-// console.log(itemListEl);
 
 // -------------------------------------------------------------/GENARAL SELECTOR-------------------------------------
 
@@ -103,17 +100,13 @@ for (let i = 0; i < ulistEl.childElementCount; i++) {
   ulistEl.children[i].addEventListener('mouseenter', (e) => {
     ulistEl.style.color = 'red';
     enterEventCount++;
-    addListItem(
-      "Voici le nombre d'évènements mouseenter : " + enterEventCount + '.'
-    );
+    addListItem();
   });
 
   ulistEl.children[i].addEventListener('mouseleave', (e) => {
     ulistEl.style.color = 'black';
     leaveEventCount++;
-    addListItem(
-      "Voici le nombre d'évènements mouseleave : " + leaveEventCount + '.'
-    );
+    addListItem();
   });
 }
 
